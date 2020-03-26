@@ -1,3 +1,5 @@
+[toc]
+
 # You are a number
 ## oh no I'm not
 ### oh yes you are
