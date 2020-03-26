@@ -92,9 +92,3 @@ A manual step is required before the pipeline will work correctly - you have to 
 - it will then ask you to select a repo and a branch again from the respective dropdowns
 - after choosing them again, save your changes to the stage and the pipeline as a whole
 - you'll probably need to make a new commit to the repo to trigger a new build
-
-
-
-
-
-git staut

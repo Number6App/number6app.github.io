@@ -1,4 +1,4 @@
-[< back](../readme.md)
+[< back](./)
 
 - in the AWS console go to AWS Secrets Manager (in the AWS account and region) you're deploying Number6 to) and click `store a new secret`
 - choose the `other types of secret` radio button
@@ -7,4 +7,4 @@
 - use the default encryption key, select next and __make sure you use the secret key as the secret name__, click next and leave automatic rotation disabled
 - Click next, review the details (make sure the key and the name are the same) and click 'store'
 
-[< back](../readme.md)
+[< back](./)
