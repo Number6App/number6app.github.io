@@ -3,5 +3,7 @@
 
 @import "{{ site.theme }}";
 .inner {
-    background-image: ./No6Icon.jpg
+    background-image: url("No6Icon.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
