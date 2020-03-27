@@ -1,3 +1,5 @@
+# What do I need to get it running?
+
 You'll need at least:
 
 - a Slack App created in your Slack workspace that will let Number6 read the messages from the public channels on a given date and also let it post back its analysis to a given channel in that workspace

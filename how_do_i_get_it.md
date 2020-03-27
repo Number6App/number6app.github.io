@@ -1,16 +1,30 @@
-you have 3 deployment choices:
+# How do I get it for my Slack?
 
-- AWS Serverless Application Repository deployment of latest release
-- Stand alone deployment from local copy of Number6 repository
-- Create a deployment pipeline that is triggered by a GitHub web hook. 
+you have 3 choices:
+
+- depoy latest release from the AWS Serverless Application Repository 
+
+- clone the Number6 repository or a fork of it and 
+
+  - deploy a stand alone version from the command line to your AWS account
+
+    or
+
+  - deploy a CD pipeline that is triggered by a GitHub web hook. 
+
   - This requires 2 accounts
+
   - a "test" account to build the application on each push and a "production" account to deploy the new version to. 
+
   - the 2 accounts can have different Slack channels to post their reports back to
+
   - The deployment to the prod account is a manual accept/reject step.
 
 ## AWS Serverless Application Repository
 
 This is simply a case of going to the SAR in the console (make sure you're using the intended account and in the intended region) and finding Number6 (you'll need to check the `Show apps that create custom IAM roles or resource policies` option for Number6 to show up) and choosing to deploy it. 
+
+### 1. save OAuth token
 
 You will need to manually store your Slack app's OAuth token in AWS Secrets Manager first:
 
@@ -22,17 +36,14 @@ You will need to manually store your Slack app's OAuth token in AWS Secrets Mana
 - the secret name can be anything you like but it will be a parameter to Number6 so something short and descriptive is advisable, `no6/slack`is a good choice.
 - Click next, review the details and click 'store'
 
+### 2. deploy from SAR
+
 You'll need to supply the following parameters in the console before it will let you deploy:
 
 - Application Name - this will default to Number6 if you leave it but you can call it anything you like
-
-- BlacklistedChannels - this is a single CSV string of channel names (
-
-  not ids e.g. `meta,announcements,trumptweets`) that shouldn't be analysed by Number6
-
-  - This is useful if you have channels with just bot traffic or something similar where it doesn't make sense to perform any semantic analysis. 
-  - You'll probably want to include Number6's output channel in this.
-
+- SlackChannel - this is the Slack id of the channel that Number6 will post back to ([what do I need](./what_do_i_need.md))
+- BlacklistedChannels - this is a single CSV string of channel names (not ids e.g. `meta,announcements,trumptweets`) that shouldn't be analysed by Number6
+  - This is useful if you have channels with just bot traffic or something similar where it doesn't make sense to perform any sentiment analysis. 
+  - You'll probably want to include Number6's output channel name in this.
 - SlackTokenSecretName - the is the name used to store the Slack OAuth token in AWS Secrets Manager that you created earlier
-
-- EnvType - this must be either `prod` or `test` the difference is that creating a `prod` stack will run Number6 at 1am every day analysing the previous day's messages. If you create a `test` stack then it will only ever run when manually triggered and analyse the messages from whatever date you give it
+- EnvType - this must be either `prod` or `test`, creating a `prod` stack will run Number6 at 1am every day analysing the previous day's messages. If you create a `test` stack then it will only ever run when manually triggered and analyse the messages from whatever date you give it
