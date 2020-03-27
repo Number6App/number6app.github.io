@@ -8,7 +8,9 @@ What ...
 
 How...
 
-​	... do I get it for my Slack?
+​	... [do I get it for my Slack?](how_do_i_get_it.md)
+
+​	... do I test it?
 
 ​	... does it work, exactly?
 

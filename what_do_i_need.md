@@ -1,6 +1,7 @@
-You'll need at least 2 things:
+You'll need at least:
 
-- a Slackbot created in your Slack workspace that will let Number6 read all the messages from the public channels on a given date and also let it post back its analysis to a given channel in that workspace
+- a Slack App created in your Slack workspace that will let Number6 read the messages from the public channels on a given date and also let it post back its analysis to a given channel in that workspace
+- the id of a Slack channel for Number6 to post to. This is Slack's internal id of the channel, not its name, see below for how to get it
 - an AWS account to deploy and run all the resources for Number6
 - Some AWS knowledge is assumed in these instructions
 - you may need a bit more depending on how you're deploying it, but those 2 are essential
@@ -26,3 +27,10 @@ You'll need at least 2 things:
 
 7. you will need to use the OAuth token that Slack creates for your app though, you can find this in `OAuth and Permissions` in the `Features` side menu of your app's page in Slack
 
+## Number6 Channel Id
+
+Number6 needs a Slack channel in your workspace to post its results back to each day, currently you need to supply the id of that channel: 
+
+- It's recommended to create a new one just for this purpose 
+- The simplest way to find the channel id is to log into your workspace through a browser, create a new channel (recommended rather than posting to an existing one) then go to the channel
+- the URL will look something like `https://app.slack.com/client/T03QK2077/C03QK207F` the final path parameter is the channel id (C03QK207F in this case)
