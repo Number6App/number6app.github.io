@@ -37,6 +37,7 @@ Number6 needs a Slack channel in your workspace to post its results back to each
 
 - It's recommended to create a new one just for this purpose 
 - The simplest way to find the channel id is to log into your workspace through a browser, create a new channel (recommended rather than posting to an existing one) then go to the channel
-- the URL will look something like `https://app.slack.com/client/T03QK2077/C03QK207F` the final path parameter is the channel id (C03QK207F in this case)
+- the URL will look something like `https://app.slack.com/client/T03QK0277/C03QK207F` the final path parameter is the channel id (C03QK207F in this case)
 
 [back](./)
+

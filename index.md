@@ -4,7 +4,7 @@ What ...
 
 ​	... [do I need to get it running?](./what_do_i_need.md)
 
-​	... does it do, exactly?
+​	... [does it do, exactly?](./what_does_it_do.md)
 
 How...
 
