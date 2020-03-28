@@ -14,7 +14,7 @@ How...
 
 ​	... [do I test it?](./how_do_i_test_it.md)
 
-​	... does it work, exactly?
+​	... [does it work, exactly?](./how_does_it_work.md)
 
 ​	... do I complain?
 
