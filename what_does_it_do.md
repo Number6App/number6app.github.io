@@ -6,5 +6,5 @@ Number6 runs once a day and uses [Amazon Comprehend](https://aws.amazon.com/comp
 
 Each Slack message has an overall sentiment as well as a score for the 4 sentiments: positive, negative, neutral and mixed. This is an example of how Number6 reports a channel's sentiment:
 
-![Sentiment Analysis]('./assets/images/sentiment.jpg')
+![Sentiment Analysis]('assets/images/sentiment.jpg')
 
