@@ -10,7 +10,7 @@ How...
 
 ​	... [do I get it for my Slack?](how_do_i_get_it.md)
 
-​	... do I test it?
+​	... [do I test it?](./how_do_i_test_it.md)
 
 ​	... does it work, exactly?
 
