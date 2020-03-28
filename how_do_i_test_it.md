@@ -1,4 +1,4 @@
-[back](./index.md)
+[back](./)
 
 # How do I test it?
 
@@ -24,4 +24,4 @@ this will analyse all the messages from yesterday. Alternatively you can trigger
 
 Whatever you choose, give the event a name and save it to go back to the function's home page. From here you should be able to select your event from the drop down and click 'Test' to run the function with it. It will take a few seconds to run and a few seconds after that you should see the output appearing in the Slack channel you designated for it.
 
-[back](./index.md)
+[back](./)

@@ -6,6 +6,8 @@ What ...
 
 ​	... [does it do, exactly?](./what_does_it_do.md)
 
+​	... [about privacy?](./what_about_privacy.md)
+
 How...
 
 ​	... [do I get it for my Slack?](how_do_i_get_it.md)
