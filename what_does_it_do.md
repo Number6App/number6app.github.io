@@ -8,3 +8,12 @@ Each Slack message has an overall sentiment as well as a score for the 4 sentime
 
 ![Sentiment Analysis](/assets/images/sentiment.jpg)
 
+There's 2 parts to this:
+
+1. **Message Sentiments** - totals for the overall sentiments for all the messages that day, in this case 23 messages
+2. **Overall Sentiment Totals** - this is a summary of the individual sentiment scores expressed as a percentage and rounded up to 2dp. This can provide a more nuanced view of the totals e.g. a message with a positive score of 0.51 and negative score of 0.48 will get an overall rating of positive.
+
+### Entity Analysis
+
+![Entity Analysis](/assets/images/entities.jpg)
+
