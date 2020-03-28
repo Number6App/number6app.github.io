@@ -1,6 +1,6 @@
 ## What does it do, exactly?
 
-Number6 runs once a day and uses [Amazon Comprehend](https://aws.amazon.com/comprehend/) to analyse all the messages in each public channel in your Slack workspace. Amazon Comprehend is a natural language processing service, Number6 uses it to report back on the sentiment, entities and key phrases in each channel.
+Number6 runs once a day and uses [Amazon Comprehend](https://aws.amazon.com/comprehend/) to analyse all the messages in each public channel in your Slack workspace. Amazon Comprehend is a natural language processing service, Number6 uses it to report back on the sentiment, entities and key phrases in each channel. An example of each part is described in more detail below, Number6 combines them into one message per channel. Each message is posted into Number6's own channel (that [you specify when you deploy it](./what_do_i_need.md)) not the channel its reporting on:
 
 ### Sentiment Analysis
 
@@ -15,5 +15,13 @@ There's 2 parts to this:
 
 ### Entity Analysis
 
+This tries to identify and categorise entities in the messages, the number in brackets is how many times they occurred:
+
 ![Entity Analysis](/assets/images/entities.jpg)
+
+### Key Phrases Analysis
+
+This tries to identify key phrases in the messages, this usually produces a large volume of phrases so only key phrases that occur more than once are reported on, the number in brackets is how many times they occurred:
+
+![Key Phrases Analysis](/assets/images/keyphrases.jpg)
 
