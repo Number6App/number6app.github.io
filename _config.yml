@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
 title: Number6
 description: You are a number
-github.repository_url: https://github.com/Number6App
+github:
+  repository_url: https://github.com/Number6App
