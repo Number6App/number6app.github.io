@@ -6,20 +6,19 @@ you can:
 
 1. find it on [the AWS Serverless Application Repository](https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/create/app?applicationId=arn:aws:serverlessrepo:eu-west-1:805721357281:applications/Number6) and deploy the latest release
 
-   or you can:
+2. Instead of deploying the latest release from SAR [you can deploy your own stand alone version](./stand_alone.md) directly from a local copy of Number6. You might want to do this to be sure that the code being deployed is what you expect, or you've made changes to Number6 or you just want to experiment.
 
-2. clone [the Number6 repository](https://github.com/Number6App/Number6) or fork it and 
+3. deploy a [CD pipeline that is triggered by a GitHub web hook](./pipeline_deployment.md). 
 
-- deploy a stand alone version from the command line to your AWS account
+   - This requires 2 AWS accounts
 
-  or
+   - a "test" account to build the application on each push and a "production" account to deploy the new version to
 
-- deploy a CD pipeline that is triggered by a GitHub web hook. 
+   - deployment to the prod account is a manual accept/reject step
 
-  - This requires 2 accounts
-  - a "test" account to build the application on each push and a "production" account to deploy the new version to. 
-  - the 2 accounts can have different Slack channels to post their reports back to
-  - The deployment to the prod account is a manual accept/reject step.
+   - the 2 accounts can have different Slack channels to post their reports back to
+
+     
 
 ## AWS Serverless Application Repository
 
@@ -46,13 +45,5 @@ You'll need to supply the following parameters in the console before it will let
   - You'll probably want to include Number6's output channel name in this.
 - **SlackTokenSecretName** - the is the name used to store the Slack oauth token in AWS Secrets Manager that you created in step 1
 - **EnvType** - this must be either `prod` or `test`, creating a `prod` stack will run Number6 at 1am every day analysing the previous day's messages. If you create a `test` stack then it will only ever [run when manually triggered](./how_do_i_test_it.md) and analyse the messages from whatever date you give it
-
-## Stand alone deployment
-
-Instead of deploying the latest release from SAR [you can deploy your own, stand alone version](./stand_alone.md) directly from a local copy of Number6. You might want to do this to be sure that the code being deployed is what you expect, or you've made changes to Number6 or you just want to experiment.
-
-## Pipeline Build
-
-TODO
 
 [back](./)
