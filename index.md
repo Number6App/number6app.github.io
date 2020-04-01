@@ -4,7 +4,7 @@
 
 ​	... [does it do, exactly? With pictures please.](./what_does_it_do.md)
 
-​	... [do I need to have to get it running?](./what_do_i_need.md)
+​	... [do I need to have to get it up and running?](./what_do_i_need.md)
 
 ​	... [about privacy?](./what_about_privacy.md)
 

@@ -49,7 +49,7 @@ You'll need to supply the following parameters in the console before it will let
 
 ## Stand alone deployment
 
-TODO
+Instead of deploying the latest release from SAR [you can deploy your own, stand alone version](./stand_alone.md) directly from a local copy of Number6. You might want to do this to be sure that the code being deployed is what you expect, or you've made changes to Number6 or you just want to experiment.
 
 ## Pipeline Build
 
