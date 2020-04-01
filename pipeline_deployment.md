@@ -4,7 +4,7 @@
 
 ### You will need 
 
-- a local copy of [the Number6 repo](https://github.com/Number6App/Number6), either clone it directly or fork it in GitHub to a repository in your account and clone that.
+- a copy of [the Number6 repo](https://github.com/Number6App/Number6), fork it in GitHub to a repository in your account and clone it locally
 - 2 AWS accounts set up for CLI access
 - the AWS CLI tools installed locally
 
@@ -21,12 +21,6 @@ This will create a pipeline deploying to 2 accounts with a Number6 app running i
 - The S3 bucket containing the build artifacts is encrypted. 
 
 - The pipeline, S3 bucket and encryption key all reside in the test account. 
-
-- Each account requires its own Slack OAuth token stored in AWS Secrets Manager (these can be the same token but they'll still need storing in each account.)
-
-- A GitHub OAuth access token needs to be stored in AWS Secrets Manager (in the test account) to be able to set up the webhook that triggers the pipeline on each commit
-
-  - this has to be saved in AWS Secrets Manager with a name and key of `no6/test/github/2`
 
 - You'll need to create 2 files in the project root named `No6AppTemplateConfig-test.json` and `No6AppTemplateConfig-prod.json`
 
@@ -45,6 +39,7 @@ This will create a pipeline deploying to 2 accounts with a Number6 app running i
 
   - see [Number6 Deployment Parameters](./number6_deployment_params.md) for the values to use when creating these files
 
+
 ### Create Pipeline
 
 To create the pipeline run `./no6.sh` in the project root, this will ask for the following parameters:
@@ -54,7 +49,9 @@ To create the pipeline run `./no6.sh` in the project root, this will ask for the
 - **AWS profile** - this is the name of a profile in your `~/.aws/credentials` file which is the account that the pipeline stack will be created in (and should be the test acct specified previously)
   - you'll probably have one called "default" but you'll still need to specify `default` at the prompt if that's the one you want to use
 - **AWS region** - the name of the region to create the stack in, e.g. `eu-west-1`
-- **GitHub Owner** - the name of the GitHub account where the Number6 repo lives (e.g. `Number6App`)
+- **Slack OAuth Token** - the token Slack generated when you created your Slack app
+- **GitHub access token** - an access token from GitHub generated in the account with the forked repo, this is needed to create the webhook so the pipeline can run on each commit 
+- **GitHub Owner** - the name of the GitHub account where your Number6 repo lives (e.g. `Number6App`)
 - **GitHub Repo Name** - the name of the Git repository in the GitHub account (e.g. `Number6`)
 - **GitHub branch name** - the name of the branch to build from whenever there is a commit to it (e.g. `master`)
 
