@@ -4,11 +4,13 @@
 
 you can:
 
-1. find it on [the AWS Serverless Application Repository](https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/create/app?applicationId=arn:aws:serverlessrepo:eu-west-1:805721357281:applications/Number6) and deploy the latest release
+1. Deploy it from [the AWS Serverless Application Repository](#AWS Serverless Application Repository)
 
-2. Instead of deploying the latest release from SAR [you can deploy your own stand alone version](./stand_alone.md) directly from a local copy of Number6. You might want to do this to be sure that the code being deployed is what you expect, or you've made changes to Number6 or you just want to experiment.
+2. Deploy [your own stand-alone version](./stand_alone.md)
 
-3. deploy a [CD pipeline that is triggered by a GitHub web hook](./pipeline_deployment.md). 
+   - you can deploy your own stand-alone version to AWS directly from a local copy of Number6. You might want to do this to be sure that the code being deployed is what you expect, you've made changes to Number6 or you just want to experiment.
+
+3. deploy a [CD pipeline to AWS that is triggered by a GitHub web hook](./pipeline_deployment.md). 
 
    - This requires 2 AWS accounts
 
