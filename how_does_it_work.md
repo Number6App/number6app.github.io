@@ -10,13 +10,13 @@ These are the resources in the diagram:
 
 | Name                        | Type     | Purpose                                                      |
 | --------------------------- | -------- | ------------------------------------------------------------ |
-| SlackComprehensions         | DynamoDb | Table holding a row for each channel and date that Number6 analyses the Slack workspace |
+| SlackComprehensions         | DynamoDb | Table holding a row for each channel and date that Number6 analyses |
 | SlackReaderFunction         | Lambda   | Calls the Slack API to retrieve all the messages for each public channel each day (or [for a specific date in testing](./how_do_i_test_it.md)), puts them onto the `SlackChannelMessagesTopic` |
 | SlackChannelMessagesTopic   | SNS      | topic that notifies listeners of all the messages on a channel for a day |
 | MessageSentimentFunction    | Lambda   | listens to `SlackChannelMessagesTopic`, sends all the Slack messages to Amazon Comprehend for sentiment analysis, writes a summary to the `SlackComprehensions` table |
 | MessageEntityFunction       | Lambda   | listens to `SlackChannelMessagesTopic`, sends all the Slack messages to Amazon Comprehend for entity analysis, writes a summary to the `SlackComprehensions` table |
 | MessageKeyPhrasesFunction   | Lambda   | listens to `SlackChannelMessagesTopic`, sends all the Slack messages to Amazon Comprehend for key phrases analysis, writes a summary to the `SlackComprehensions` table |
-| ProcessComprehensionsStream | Lambda   | triggered by updates to the `SlackComprehensions` table, when the sentiment, entity and key phrases analysis for a channel have been completed it posts the details to Slack |
+| ProcessComprehensionsStream | Lambda   | triggered by updates to the `SlackComprehensions` table, when the sentiment, entity and key phrases analysis for a channel have all been updated for a channel in the database it posts the details to Slack |
 
 Not shown is AWS Secrets Manager which holds the [Slack access token needed](./what_do_i_need.md) to use the Slack API.
 
