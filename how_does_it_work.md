@@ -16,7 +16,7 @@ These are the resources in the diagram:
 | MessageSentimentFunction    | Lambda   | listens to `SlackChannelMessagesTopic`, sends all the Slack messages to Amazon Comprehend for sentiment analysis, writes a summary to the `SlackComprehensions` table |
 | MessageEntityFunction       | Lambda   | listens to `SlackChannelMessagesTopic`, sends all the Slack messages to Amazon Comprehend for entity analysis, writes a summary to the `SlackComprehensions` table |
 | MessageKeyPhrasesFunction   | Lambda   | listens to `SlackChannelMessagesTopic`, sends all the Slack messages to Amazon Comprehend for key phrases analysis, writes a summary to the `SlackComprehensions` table |
-| ProcessComprehensionsStream | Lambda   | triggered by updates to the `SlackComprehensions` table, when the sentiment, entity and key phrases analysis for a channel have all been updated for a channel in the database it posts the details to Slack |
+| ProcessComprehensionsStream | Lambda   | triggered by updates to the `SlackComprehensions` table, when the sentiment, entity and key phrases analysis for a channel have been updated in the database it posts the details to Slack |
 
 Not shown is AWS Secrets Manager which holds the [Slack access token needed](./what_do_i_need.md) to use the Slack API.
 
