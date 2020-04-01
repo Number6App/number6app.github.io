@@ -2,7 +2,7 @@
 
 # How do I get it for my Slack?
 
-you can:
+In order of increasing complicatedness you can:
 
 1. Deploy it from the AWS Serverless Application Repository (see below)
 
