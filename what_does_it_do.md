@@ -8,7 +8,7 @@ An example of each part is described in more detail below, Number6 combines them
 
 ### Sentiment Analysis
 
-Each Slack message has an overall sentiment as well as a score for each of the 4 sentiments: positive, negative, neutral and mixed. This is an example of how Number6 reports a channel's sentiment:
+Each Slack message is given an overall sentiment as well as a score for each of the 4 sentiments: positive, negative, neutral and mixed. This is an example of how Number6 reports a channel's sentiment:
 
 ![Sentiment Analysis](/assets/images/sentiment.jpg)
 
@@ -19,7 +19,7 @@ There's 2 parts to this:
 
 ### Entity Analysis
 
-This tries to identify and categorise entities in the messages, the number in brackets is how many times they occurred:
+This tries to identify and categorise entities in the messages, the number in brackets is how many times they occurred. Links are always classified as "Other":
 
 ![Entity Analysis](/assets/images/entities.jpg)
 
