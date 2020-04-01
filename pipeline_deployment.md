@@ -2,13 +2,15 @@
 
 # Pipeline Deployment
 
-1. You will need 
+### You will need 
 
 - a local copy of [the Number6 repo](https://github.com/Number6App/Number6), either clone it directly or fork it in GitHub to a repository in your account and clone that.
 - 2 AWS accounts set up for CLI access
 - the AWS CLI tools installed locally
 
-2. This will create a pipeline deploying to 2 accounts with a Number6 app running in each, a "test" and "production" version. 
+### You will get
+
+This will create a pipeline deploying to 2 accounts with a Number6 app running in each, a "test" and "production" version. 
 
 - The pipeline is triggered each time a commit is pushed to a given branch in a given GitHub repository. 
 
@@ -43,7 +45,9 @@
 
   - see [Number6 Deployment Parameters](./number6_deployment_params.md) for the values to use when creating these files
 
-3. To create the pipeline run `./no6.sh` in the project root, this will ask for the following parameters:
+### Create Pipeline
+
+To create the pipeline run `./no6.sh` in the project root, this will ask for the following parameters:
 
 - **test acct** - AWS's account id for the test account (a 12 digit number)
 - **prod acct** - AWS's account id for the production account (a 12 digit number)
@@ -54,7 +58,7 @@
 - **GitHub Repo Name** - the name of the Git repository in the GitHub account (e.g. `Number6`)
 - **GitHub branch name** - the name of the branch to build from whenever there is a commit to it (e.g. `master`)
 
-4. It will create a couple of stacks for the encryption keys and the roles in the test account then it will ask for 2 more parameters before it creates the roles in the production account:
+It will create a couple of stacks for the encryption keys and the roles in the test account then it will ask for 2 more parameters before it creates the roles in the production account:
 
 - **S3 Bucket from the CMK stack**
 - **ARN of the CMK in KMS**
