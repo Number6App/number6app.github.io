@@ -22,4 +22,6 @@ Not shown is AWS Secrets Manager which holds the [Slack access token needed](./w
 
 Number6 is created in a single CloudFormation stack containing all its resources with the possible exception of the Slack token in AWS Secrets Manager, depending on [how you choose to deploy it](./how_do_i_get_it.md).
 
+The DynamoDB table is configured for on-demand capacity with no backup schedule. This is the cheapest configuration, if backups and/or higher capacity are important to you you'll need to update the table configuration manually or [deploy a non-SAR version](how_do_i_get_it.md).  
+
 [back](./)

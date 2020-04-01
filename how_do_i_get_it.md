@@ -21,7 +21,7 @@ you can:
 
 ## AWS Serverless Application Repository
 
-This is simply a case of going to the SAR in the console (make sure you're using the intended account and in the intended region) and finding Number6 (you'll need to check the `Show apps that create custom IAM roles or resource policies` option for Number6 to show up) and choosing to deploy it. 
+This is simply a case of going to [the SAR in the console](https://aws.amazon.com/serverless/serverlessrepo/) (make sure you're using the intended account and in the intended region) and finding Number6 (you'll need to check the `Show apps that create custom IAM roles or resource policies` option for Number6 to show up) and choosing to deploy it. 
 
 ### 1. save OAuth token
 
@@ -46,5 +46,13 @@ You'll need to supply the following parameters in the console before it will let
   - You'll probably want to include Number6's output channel name in this.
 - **SlackTokenSecretName** - the is the name used to store the Slack oauth token in AWS Secrets Manager that you created earlier
 - **EnvType** - this must be either `prod` or `test`, creating a `prod` stack will run Number6 at 1am every day analysing the previous day's messages. If you create a `test` stack then it will only ever run when manually triggered and analyse the messages from whatever date you give it
+
+## Stand alone deployment
+
+TODO
+
+## Pipeline Build
+
+TODO
 
 [back](./)

@@ -1,14 +1,14 @@
-Number6 is an open source AWS app that performs sentiment analysis on the messages posted to a Slack workspace. It runs once a day and posts the results back to a Slack channel in that workspace. 
+## Number6 is an open source AWS app that performs sentiment analysis on the messages posted to a Slack workspace. It runs once a day and posts the results back to a Slack channel in that workspace. 
 
-What ...
+### What ...
 
-​	... [do I need to get it running?](./what_do_i_need.md)
+​	... [does it do, exactly? With pictures please.](./what_does_it_do.md)
 
-​	... [does it do, exactly?](./what_does_it_do.md)
+​	... [do I need to have to get it running?](./what_do_i_need.md)
 
 ​	... [about privacy?](./what_about_privacy.md)
 
-How...
+### How...
 
 ​	... [do I get it for my Slack?](how_do_i_get_it.md)
 
@@ -16,5 +16,5 @@ How...
 
 ​	... [does it work, exactly?](./how_does_it_work.md)
 
-​	... do I complain?
+​	... [do I complain](how_do_i_complain.md)?
 
