@@ -4,7 +4,7 @@
 
 ### You will need 
 
-- a local copy of [the Number6 repo](https://github.com/Number6App/Number6), either clone it directly or fork it in GitHub to a repository in your account and clone that.
+- a local copy of [the Number6 repository](https://github.com/Number6App/Number6), either clone it directly or fork it in GitHub to a repository in your account and clone that.
 - an AWS account set up for CLI access
 - the AWS CLI tools installed locally
 - your [Slack OAuth token stored in AWS Secrets Manager](./slack_oauth_secret.md)
@@ -16,9 +16,9 @@ it will ask you to supply 3 arguments:
 - **aws profile** - this is the name of a profile in your `~/.aws/credentials` file which is the account that the Number6 stack will be created in
   - you'll probably have one called "default" but you'll still need to specify `default` at the prompt if that's the one you want to use
 - **aws region** - the name of the region to create the stack in, e.g. `eu-west-1`
-- **the name of an S3 bucket** - CloudFormation will use this bucket to upload and deploy the lambda code so obviously you'll need read and write privileges 
+- **the name of an S3 bucket** - CloudFormation will use this bucket to upload and deploy the lambda code so obviously you'll need read and write privileges for that bucket for the profile you specify  
 
-It should take a couple of minutes to run, Number6 is a Java app built with Maven so you'll see lots of output from that going up the screen as it compiles, tests and packages everything, when it finishes you'll see something like
+It should take a couple of minutes to run, Number6 is a Kotlin app built with Maven so you'll see lots of output from that going up the screen as it compiles, tests and packages everything, when it finishes you'll see something like
 
 ```bash
    Successfully packaged artifacts and wrote output template to file template-export.yml.

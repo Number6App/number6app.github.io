@@ -2,7 +2,7 @@
 
 # How does it work, exactly?
 
-Number6 is a serverless app hosted on AWS, built and deployed using their [Serverless Application Model](https://aws.amazon.com/serverless/sam/) framework. It's based on lambda functions written in Java using a [hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) ("ports and adaptors") and the [Dagger DI framework.](https://dagger.dev) Here's a picture of it in action:
+Number6 is a serverless app hosted on AWS, built and deployed using their [Serverless Application Model](https://aws.amazon.com/serverless/sam/) framework. It's based on lambda functions written in Kotlin using a [hexagonal architecture](https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)) ("ports and adaptors") and the [Dagger DI framework.](https://dagger.dev) Here's a picture of it in action:
 
 ![Architecture](/assets/images/arch.png)
 
