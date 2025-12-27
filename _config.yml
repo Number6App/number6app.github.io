@@ -4,3 +4,5 @@ description: You are a number
 google_analytics: UA-162643429-1
 github:
   repository_url: https://github.com/Number6App
+include:
+  - _headers
